@@ -1,0 +1,12 @@
+module decoder 3-8-tb; reg [2:O]I, wire [1:0]4;
+decoder 3-8 D2 (I,4);
+initial
+$ monitor ($time, "%. b-%b", I, 4);
+initial begin
+repeat (8) 
+begin
+I = $ random; #20;
+end
+$ finish
+end 
+endemodule
