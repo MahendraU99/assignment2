@@ -1,0 +1,16 @@
+module pipo_tb;
+reg [3:0]d;
+reg clk;
+wire [3:0]q;
+pipo cout(d,clk,q);
+ clk=0;
+always #clk=~clk;
+initial 
+begin
+   d=4'b0000; #10
+   d=4'b0011; #10
+   d=4'b0111; #10
+   d=4'b1111; #10
+$finish
+end 
+endmodule
